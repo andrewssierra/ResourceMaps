@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Map from './Map/index';
 
 class App extends React.Component {
     render() {
-        return(
-            <div>Hello</div>
-        )
+        return <Map />;
     }
 }
 
-export default App
+export default App;
