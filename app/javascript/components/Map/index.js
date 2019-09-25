@@ -1,14 +1,21 @@
 import React from 'react';
 import L from 'leaflet';
-import styles from './Map.css';
 import 'leaflet/dist/leaflet.css';
-import { watchFile } from 'fs';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+    width: ${props => props.width};
+    height: ${props => props.height};
+    float: ${props => props.float};
+    left: ${props => props.left};
+    top: ${props => props.top};
+`;
 
 export default class Map extends React.Component {
     componentDidMount() {
         this.map = L.map('map', {
-            center: [38.380422, -101.342848],
-            zoom: 4,
+            center: [46.996085, -121.077026],
+            zoom: 8,
             zoomControl: true
         });
 
@@ -23,6 +30,15 @@ export default class Map extends React.Component {
     }
 
     render() {
-        return <div id="map"></div>;
+        return (
+            <Wrapper
+                width="calc(100% - 18px)"
+                height="calc(100% - 18px)"
+                left="9px"
+                top="9px"
+                float="center"
+                id="map"
+            />
+        );
     }
 }
