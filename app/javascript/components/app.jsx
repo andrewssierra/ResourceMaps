@@ -1,9 +1,10 @@
 import React from 'react';
-import Map from './Map/index';
+import Map from './Map/Map';
+import Graph from './Graph/Graph';
 import GridLayout from 'react-grid-layout';
 import RGL, { WidthProvider } from 'react-grid-layout';
-import './Map/index.css';
 
+import './Map/index.css';
 const ReactGridLayout = WidthProvider(RGL);
 
 class MyFirstGrid extends React.Component {
@@ -23,15 +24,13 @@ class MyFirstGrid extends React.Component {
                             x: 0,
                             y: 0,
                             w: 6,
-                            h: 10,
-                            minW: 2,
-                            maxW: 8
+                            h: 10
                         }}
                         style={{
                             backgroundColor: '#1f1d1d'
                         }}
                     >
-                        b
+                        <Graph />
                     </div>
                     <div
                         key="c"
