@@ -33,9 +33,8 @@ export default class Map extends React.Component {
         return (
             <Wrapper
                 width="calc(100% - 18px)"
-                height="calc(100% - 18px)"
+                height="calc(100% - 35px)"
                 left="9px"
-                top="9px"
                 float="center"
                 id="map"
             />

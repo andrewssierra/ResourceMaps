@@ -27,7 +27,7 @@ class Graph extends Component {
     componentDidMount() {
         this.interval = setInterval(
             () => this.setState({ data: this.data() }),
-            5000
+            1000
         );
     }
     componentWillUnmount() {
@@ -39,8 +39,8 @@ class Graph extends Component {
             <Fragment>
                 <div className="App">
                     <XYPlot
-                        height={450}
-                        width={910}
+                        height={430}
+                        width={610}
                         stroke="#76a667"
                         style={{ strokeWidth: 0.5 }}
                     >
