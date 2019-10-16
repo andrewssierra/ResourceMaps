@@ -2,6 +2,7 @@ import React from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import styled from 'styled-components';
+import icon from '../../images/marker.png';
 
 const Wrapper = styled.div`
     width: ${props => props.width};
@@ -22,11 +23,16 @@ export default class Map extends React.Component {
         L.tileLayer(
             'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
             {
-                detectRetina: true,
                 maxZoom: 20,
                 maxNativeZoom: 17
             }
         ).addTo(this.map);
+
+        var thisIcon = new L.Icon({
+            iconUrl: icon,
+            iconSize: [10, 10] // size of the icon
+        });
+        L.marker([46.996085, -121.077026], { icon: thisIcon }).addTo(this.map);
     }
 
     render() {

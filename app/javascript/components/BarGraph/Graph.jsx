@@ -13,8 +13,20 @@ import {
 class Graph extends Component {
     data = () => {
         let test = [];
-        for (let i = 0; i < 750; i++) {
+        for (let i = 0; i < 500; i++) {
             test[i] = { x: i, y: Math.random() * 11 };
+        }
+        return test;
+    };
+
+    updateData = () => {
+        let test = this.state.data;
+        test.splice(0, 50);
+        test.map(obj => {
+            obj.x = obj.x - 50;
+        });
+        for (let i = 450; i < 500; i++) {
+            test.push({ x: i, y: Math.random() * 11 });
         }
         return test;
     };
@@ -26,8 +38,8 @@ class Graph extends Component {
 
     componentDidMount() {
         this.interval = setInterval(
-            () => this.setState({ data: this.data() }),
-            1000
+            () => this.setState({ data: this.updateData() }),
+            2000
         );
     }
     componentWillUnmount() {

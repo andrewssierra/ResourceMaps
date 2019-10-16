@@ -8,8 +8,14 @@ class Gauge extends Component {
             <GaugeChart
                 id="gauge-chart2"
                 colors={['#e03434', '#d67627', '#32ba2d']}
-                nrOfLevels={15}
                 percent={0.9308}
+                animate={false}
+                cornerRadius={1}
+                arcPadding={0.01}
+                arcsLength={[5, 3, 3]}
+                arcWidth={0.175}
+                needleColor={'#000000'}
+                needleBaseColor={'#000000'}
             />
         );
     }
