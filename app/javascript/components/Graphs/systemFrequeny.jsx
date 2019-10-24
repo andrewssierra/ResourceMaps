@@ -10,7 +10,7 @@ import {
     YAxis
 } from 'react-vis';
 
-class Graph extends Component {
+class SystemFrequency extends Component {
     data = () => {
         let test = [];
         for (let i = 0; i < 500; i++) {
@@ -21,11 +21,11 @@ class Graph extends Component {
 
     updateData = () => {
         let test = this.state.data;
-        test.splice(0, 50);
+        test.splice(0, 5);
         test.map(obj => {
-            obj.x = obj.x - 50;
+            obj.x = obj.x - 5;
         });
-        for (let i = 450; i < 500; i++) {
+        for (let i = 495; i < 500; i++) {
             test.push({ x: i, y: Math.random() * 11 });
         }
         return test;
@@ -37,10 +37,10 @@ class Graph extends Component {
     }
 
     componentDidMount() {
-        this.interval = setInterval(
-            () => this.setState({ data: this.updateData() }),
-            2000
-        );
+        // this.interval = setInterval(
+        //     () => this.setState({ data: this.updateData() }),
+        //     500
+        // );
     }
     componentWillUnmount() {
         clearInterval(this.interval);
@@ -71,4 +71,4 @@ class Graph extends Component {
     }
 }
 
-export default Graph;
+export default SystemFrequency;

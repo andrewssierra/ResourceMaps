@@ -14,8 +14,8 @@ class Gauge extends Component {
                 arcPadding={0.01}
                 arcsLength={[5, 3, 3]}
                 arcWidth={0.175}
-                needleColor={'#000000'}
-                needleBaseColor={'#000000'}
+                needleColor={'#32BA2D'}
+                needleBaseColor={'#32BA2D'}
             />
         );
     }

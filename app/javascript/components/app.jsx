@@ -1,6 +1,8 @@
 import React from 'react';
 import Map from './Map/Map';
-import Graph from './BarGraph/Graph';
+import SystemFrequency from './Graphs/systemFrequeny';
+
+import TramComponents from './Graphs/tramComponents';
 import Gauge from './Gauge/Gauge';
 import GridLayout from 'react-grid-layout';
 import RGL, { WidthProvider } from 'react-grid-layout';
@@ -36,7 +38,7 @@ class MyFirstGrid extends React.Component {
                         <Gauge />
                     </div>
                     <div
-                        key="graph"
+                        key="systemFrequency"
                         data-grid={{
                             x: 2,
                             y: 0,
@@ -48,7 +50,7 @@ class MyFirstGrid extends React.Component {
                         }}
                     >
                         <div className="title">System Frequency</div>
-                        <Graph />
+                        <SystemFrequency />
                     </div>
                     <div
                         key="map"
@@ -118,14 +120,26 @@ class MyFirstGrid extends React.Component {
                     </div>
                     <div
                         key="e"
-                        data-grid={{ x: 14, y: 15, w: 12, h: 8 }}
+                        data-grid={{ x: 14, y: 15, w: 12, h: 4 }}
                         style={{
                             backgroundColor: '#1f1d1d',
                             resize: 'both',
                             overflow: 'auto'
                         }}
                     >
-                        e
+                        <div className="title">Tram Components</div>
+                        <TramComponents />
+                    </div>
+                    <div
+                        key="f"
+                        data-grid={{ x: 14, y: 19, w: 12, h: 4 }}
+                        style={{
+                            backgroundColor: '#1f1d1d',
+                            resize: 'both',
+                            overflow: 'auto'
+                        }}
+                    >
+                        f
                     </div>
                 </GridLayout>
             </div>
