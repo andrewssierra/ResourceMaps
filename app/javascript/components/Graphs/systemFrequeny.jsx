@@ -37,10 +37,10 @@ class SystemFrequency extends Component {
     }
 
     componentDidMount() {
-        // this.interval = setInterval(
-        //     () => this.setState({ data: this.updateData() }),
-        //     500
-        // );
+        this.interval = setInterval(
+            () => this.setState({ data: this.updateData() }),
+            500
+        );
     }
     componentWillUnmount() {
         clearInterval(this.interval);

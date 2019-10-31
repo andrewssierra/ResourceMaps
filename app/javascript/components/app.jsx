@@ -1,8 +1,8 @@
 import React from 'react';
 import Map from './Map/Map';
 import SystemFrequency from './Graphs/systemFrequeny';
-
 import TramComponents from './Graphs/tramComponents';
+import VoltageMagnitude from './Graphs/voltageMagnitude';
 import Gauge from './Gauge/Gauge';
 import GridLayout from 'react-grid-layout';
 import RGL, { WidthProvider } from 'react-grid-layout';
@@ -139,7 +139,8 @@ class MyFirstGrid extends React.Component {
                             overflow: 'auto'
                         }}
                     >
-                        f
+                        <div className="title">Voltage Magnitudes</div>
+                        <VoltageMagnitude />
                     </div>
                 </GridLayout>
             </div>
